@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Abuzar Sheikh</title>
+  </head>
+  <style>
+    #cursor-circle {
+      width: 15px;
+      height: 15px;
+      background-color: black;
+      border-radius: 50%;
+      position: absolute;
+      pointer-events: none;
+      overflow: hidden;
+    }
+  </style>
+  <body>
+    <div id="root"></div>
+    <div id="cursor-circle">
+      <img src="/src/assets/profile.jpg" alt="" />
+    </div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      document.addEventListener("mousemove", function (e) {
+        var circle = document.getElementById("cursor-circle");
+        circle.style.left = e.pageX - 30 + "px";
+        circle.style.top = e.pageY - 30 + "px";
+      });
+    </script>
+  </body>
+</html>

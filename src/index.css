@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: OutFit;
+}
+
+.fustat-regular {
+  font-family: "Fustat", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.px-4 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
