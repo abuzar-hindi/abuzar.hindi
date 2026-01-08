@@ -2,10 +2,13 @@ import React from "react";
 import Hero from "../components/Hero";
 import Sparks from "../components/Sparks";
 import About from "../components/About";
-import Hover from "../components/Hover";
-import Hoverimage from "../components/Hoverimage";
-import Example from "../components/Boxhover";
-import LogoOrigami from "../components/LogoOrigami";
+import Services from "../components/Services";
+import Projects from "../components/Projects";
+
+// import Hover from "../components/Hover";
+// import Hoverimage from "../components/Hoverimage";
+import TechStack from "../components/TechStack";
+import Contacts from "../components/Contacts";
 
 const Home = ({ trailOn, setTrailOn }) => {
   return (
@@ -14,10 +17,15 @@ const Home = ({ trailOn, setTrailOn }) => {
       <Hero trailOn={trailOn} setTrailOn={setTrailOn} />
       {/* then this component (Hero.jsx) starts rendering found in components directory and then below */}
       <About />
-      <Hover />
-      <Hoverimage />
-      <Example />
-      <LogoOrigami />
+      <Services />
+      <Projects />
+
+
+      {/* <Hover /> */}
+      {/* <Hoverimage /> */}
+      <TechStack />
+      <Contacts />
+      {/* <LogoOrigami /> */}
     </div>
   );
 };

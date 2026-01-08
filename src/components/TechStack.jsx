@@ -1,20 +1,33 @@
 import React from "react";
 import {
-  SiAdobe,
-  SiApple,
-  SiFacebook,
-  SiGoogle,
-  SiLinkedin,
-  SiShopify,
-  SiSoundcloud,
-  SiSpotify,
-  SiTiktok,
+  SiMongodb,
+  SiExpress,
+  SiReact,
+  SiNodedotjs,
+
+  SiVercel,
+  SiGit,
+  SiGithub,
+  SiPostman,
+  SiNpm,
+
+  SiHtml5,
+  SiTailwindcss,
+  SiJavascript,
 } from "react-icons/si";
 import { useAnimate } from "framer-motion";
 
-export const Example = () => {
+export const TechStack = () => {
   return (
-    <div className="bg-neutral-50 px-4 py-12">
+    <div className="bg-gray-300 px-12 lg:px-12 py-24 md:py-32">
+      <div className="mb-12 text-center">
+        <h2 className="text-4xl md:text-8xl font-bold text-black tracking-tight">
+          Teck Stack
+        </h2>
+        <p className="text-md sm:text-[25px] text-red max-w-2xl mx-auto mt-1">
+          Working knowledge of  <span className="italic"> Node.js </span> &  <span className="italic">MongoDB</span>
+        </p>
+      </div>
       <div className="mx-auto max-w-7xl">
         <ClipPathLinks />
       </div>
@@ -24,21 +37,24 @@ export const Example = () => {
 
 const ClipPathLinks = () => {
   return (
-    <div className="divide-y divide-neutral-900 border border-neutral-900">
-      <div className="grid grid-cols-2 divide-x divide-neutral-900">
-        <LinkBox Icon={SiGoogle} href="#" />
-        <LinkBox Icon={SiShopify} href="#" />
+    <div id="techstack" className="divide-y divide-neutral-900 border border-neutral-900 scroll-mt-72">
+      <div className="grid grid-cols-5 divide-x divide-neutral-900">
+        <LinkBox Icon={SiVercel} href="#" />
+        <LinkBox Icon={SiGithub} href="#" />
+        <LinkBox Icon={SiGit} href="#" />
+        <LinkBox Icon={SiPostman} href="#" />
+        <LinkBox Icon={SiNpm} href="#" />
       </div>
       <div className="grid grid-cols-4 divide-x divide-neutral-900">
-        <LinkBox Icon={SiApple} href="#" />
-        <LinkBox Icon={SiSoundcloud} href="#" />
-        <LinkBox Icon={SiAdobe} href="#" />
-        <LinkBox Icon={SiFacebook} href="#" />
+        <LinkBox Icon={SiMongodb} href="#" />
+        <LinkBox Icon={SiExpress} href="#" />
+        <LinkBox Icon={SiReact} href="#" />
+        <LinkBox Icon={SiNodedotjs} href="#" />
       </div>
       <div className="grid grid-cols-3 divide-x divide-neutral-900">
-        <LinkBox Icon={SiTiktok} href="#" />
-        <LinkBox Icon={SiSpotify} href="#" />
-        <LinkBox Icon={SiLinkedin} href="#" />
+        <LinkBox Icon={SiHtml5} href="#" />
+        <LinkBox Icon={SiJavascript} href="#" />
+        <LinkBox Icon={SiTailwindcss} href="#" />
       </div>
     </div>
   );
@@ -139,4 +155,4 @@ const LinkBox = ({ Icon, href }) => {
   );
 };
 
-export default Example
+export default TechStack

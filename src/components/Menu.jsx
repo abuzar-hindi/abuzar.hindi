@@ -1,55 +1,60 @@
-import React from 'react'
+//             {/* <li className='text-xl hover:scale-110 transition-all duration-300 '>How I work .......................... IV</li>
+//             <li className='text-xl hover:scale-110 transition-all duration-300 '>Case Study ............... V</li>
+//             <li className='text-xl hover:scale-110 transition-all duration-300 '>Pricing ............... V</li>
+//             <li className='text-xl hover:scale-110 transition-all duration-300 '>Testimonials ............... V</li>
+//             <li className='text-xl hover:scale-110 transition-all duration-300 '>FAQ's ............... V</li>
+//             <li className='text-xl hover:scale-110 transition-all duration-300 '>Why you should trust me ............... V</li> */}
+
+
 import { motion, AnimatePresence } from "framer-motion";
 
-const Menu = () => {
+const Menu = ({ onClose }) => {
+
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    onClose(); // ✅ close menu after click
+  };
+
   return (
-    <div className=''>
-      <AnimatePresence>
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          className="fixed top-[80px] flex justify-center items-center text-white p-5 rounded-lg shadow-lg inset-0 backdrop-blur-lg z-[999]"
-          onClick={(e) => e.stopPropagation()}>
-          <ul>
-            <ul className="space-y-3">
-              <li className="flex items-center justify-between text-xl transition-all duration-300 hover:translate-x-1">
-                <span>About</span>
-                <span className="opacity-60 ml-20">I</span>
-              </li>
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="fixed inset-0 z-[999] backdrop-blur-lg flex justify-center items-center"
+        onClick={onClose}
+      >
+        <motion.ul
+          initial={{ y: -20 }}
+          animate={{ y: 0 }}
+          exit={{ y: -20 }}
+          onClick={(e) => e.stopPropagation()}
+          className="text-white"
+        >
+          {[
+            ["Home", "hero", "I"],
+            ["About", "about", "II"],
+            ["Services", "services", "III"],
+            ["Projects", "projects", "IV"],
+            ["Tech Stack", "techstack", "V"],
+            ["Contact", "contacts", "VI"],
+          ].map(([label, id, num]) => (
+            <li
+              key={id}
+              onClick={() => scrollToSection(id)}
+              className="flex items-center justify-between text-xl transition-all duration-300 hover:translate-x-1 px-3 py-1 w-full hover:bg-white hover:text-4xl md:hover:text-6xl cursor-pointer font-semibold hover:text-blue-800"
+            >
+              <span className="px-3 py-1 w-full">{label}</span>
+              <span className="ml-20">{num}</span>
+            </li>
+          ))}
+        </motion.ul>
+      </motion.div>
+    </AnimatePresence>
+  );
+};
 
-              <li className="flex items-center justify-between text-xl transition-all duration-300 hover:translate-x-1">
-                <span>Services</span>
-                <span className="opacity-60 ml-20">II</span>
-              </li>
-
-              <li className="flex items-center justify-between text-xl transition-all duration-300 hover:translate-x-1">
-                <span>Projects</span>
-                <span className="opacity-60 ml-20">III</span>
-              </li>
-
-              <li className="flex items-center justify-between text-xl transition-all duration-300 hover:translate-x-1">
-                <span>Tech Stack</span>
-                <span className="opacity-60 ml-20">IV</span>
-              </li>
-
-              <li className="flex items-center justify-between text-xl transition-all duration-300 hover:translate-x-1">
-                <span>Contact</span>
-                <span className="opacity-60 ml-20">V</span>
-              </li>
-            </ul>
-
-
-            {/* <li className='text-xl hover:scale-110 transition-all duration-300 '>How I work .......................... IV</li>
-            <li className='text-xl hover:scale-110 transition-all duration-300 '>Case Study ............... V</li>
-            <li className='text-xl hover:scale-110 transition-all duration-300 '>Pricing ............... V</li>
-            <li className='text-xl hover:scale-110 transition-all duration-300 '>FAQ's ............... V</li>
-            <li className='text-xl hover:scale-110 transition-all duration-300 '>Why you should trust me ............... V</li> */}
-          </ul>
-        </motion.div>
-      </AnimatePresence>
-    </div>
-  )
-}
-
-export default Menu
+export default Menu;

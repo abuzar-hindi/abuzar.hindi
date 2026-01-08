@@ -27,7 +27,7 @@ const Hero = ({ trailOn, setTrailOn }) => {
 
   return (
 
-    <div className="relative h-screen w-full overflow-hidden">
+    <div id="hero" className="relative h-screen w-full overflow-hidden">
 
       <Navbar trailOn={trailOn} setTrailOn={setTrailOn} />
       <ImageTraill
@@ -60,7 +60,7 @@ const Hero = ({ trailOn, setTrailOn }) => {
                 <img src={profile} alt="" />
               </div>
               <p className="text-white text-xl">Hi, I'm Abuzar Hindi</p>
-              <h1 className="lg:text-7xl md:text-6xl px-5 sm:text-6xl text-5xl text-white font-bold text-center">FULL STACK <span className="text-yellow-400">DEVELOPER</span> </h1>
+              <h1 className="text-4xl sm:text-6xl lg:text-7xl px-5 text-white font-bold text-center">FULL STACK <span className="text-yellow-400">DEVELOPER</span> </h1>
 
               <div className="text-center px-3">
                 <span

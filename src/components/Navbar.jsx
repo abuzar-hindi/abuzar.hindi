@@ -17,9 +17,11 @@ const Navbar = ({ trailOn, setTrailOn }) => {
 
   return (
     <>
-      <div className="absolute z-[1000] top-0 left-0 text-white w-full h-[80px] bg-transparent flex items-center justify-between px-8">
-        <div className="relative text-center hover:text-yellow-400 hover:cursor-pointer leading-none font-semibold text-xl">
-          Abuzar <br />Sheikh
+      <div className="fixed top-0 left-0 z-[1000] w-full h-[65px]
+ bg-black/30 backdrop-blur-md
+ flex items-center justify-between px-8">
+        <div className="relative text-white text-center hover:text-yellow-400 hover:cursor-pointer leading-none font-semibold text-xl">
+          Abuzar <br />Hindi
         </div>
         <motion.div
           onClick={() => setTrailOn(p => !p)}
@@ -49,10 +51,12 @@ const Navbar = ({ trailOn, setTrailOn }) => {
             )}
           </AnimatePresence>
         </motion.div>
-
-        <div onClick={openMenus} onMouseEnter={() => setOpenMenu(true)} className="fixed relative text-center hover:cursor-pointer hover:text-yellow-400 leading-none font-semibold text-xl">
-          ☰
+        <div className='flex gap-4'>
+          <div onClick={openMenus} className="fixed text-white relative text-center hover:cursor-pointer hover:text-yellow-400 leading-none font-semibold text-xl">
+            ☰
+          </div>
         </div>
+
 
       </div>
       <AnimatePresence>

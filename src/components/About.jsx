@@ -36,26 +36,29 @@ const AboutText = () => {
   const y = useTransform(scrollYProgress, [0, 0.3], [40, 0]);
 
   return (
-    <motion.div
-      ref={ref}
-      style={{ opacity, y }}
-      className="space-y-6"
-    >
-      <h2 className="text-4xl md:text-5xl font-bold text-red-500 tracking-tight">
-        About
-      </h2>
-      <div className="space-y-4 text-lg leading-relaxed text-black">
-        <p>
-          I’m Abuzar Hindi, a <b className="text-blue-700">Full MERN Stack Stack Web Developer</b>. I work on building reliable, scalable web applications with a strong focus on both frontend experience and backend logic. On the frontend, I care deeply about structure, responsiveness, and usability, and on the backend, I focus on clean APIs, data flow, and maintainable logic.</p>
-        <p className="text-gray-500">
-          <li>I build reusable, scalable components on both frontend and backend</li>
-          <li>I use animations only where they improve clarity or user experience</li>
-          <li>I focus on clean code, clear structure, and long-term maintainability</li>
+
+    <section id="about" className="scroll-mt-48">
+      <motion.div
+        ref={ref}
+        style={{ opacity, y }}
+        className="space-y-6"
+      >
+        <h2 className="text-4xl md:text-8xl font-bold text-red-500 tracking-tight">
+          About
+        </h2>
+        <div className="space-y-4 text-lg leading-relaxed text-black">
+          <p>
+            I’m <b>Abuzar Hindi</b> , a <b className="text-blue-700">Full MERN Stack Stack Web Developer</b>. I work on building reliable, scalable web applications with a strong focus on both frontend experience and backend logic. On the frontend, I care deeply about structure, responsiveness, and usability, and on the backend, I focus on clean APIs, data flow, and maintainable logic.</p>
+          <p className="text-gray-500">
+            <li>I build reusable, scalable components on both frontend and backend</li>
+            <li>I use animations only where they improve clarity or user experience</li>
+            <li>I focus on clean code, clear structure, and long-term maintainability</li>
 
 
-        </p>
-      </div>
-    </motion.div>
+          </p>
+        </div>
+      </motion.div>
+    </section>
   );
 };
 
