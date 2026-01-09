@@ -48,8 +48,7 @@ const Hero = ({ trailOn, setTrailOn }) => {
                   key={index}
                   onMouseEnter={() => handleMouseEnter(index)}
                   onMouseLeave={handleMouseLeave}
-                  className={`w-16 h-16 transition-all duration-200 border border-gray-500/10 ${hoveredIndex === index ? "bg-black bg-gray-900" : "bg-black"
-                    }`}
+                  className={`w-16 h-16 transition-all duration-200 border border-gray-500/10 bg-black`}
                 />
               ))}
             </div>
