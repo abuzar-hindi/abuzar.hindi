@@ -39,7 +39,7 @@ const Projects = () => {
         'Created a focused product page that highlights features and helps visitors understand the value quickly.',
       image: ecommerce,
       type: 'Full Stack · E-commerce',
-      link: 'https://e-commerce-front-end-rust.vercel.app/'
+      link: 'https://ecom-ten-henna.vercel.app/'
     },
   ]
 
