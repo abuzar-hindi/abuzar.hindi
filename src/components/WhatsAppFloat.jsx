@@ -7,7 +7,7 @@ const WhatsAppFloating = () => {
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-[9999]
-                 bg-white hover:bg-yellow-300
+                 bg-white hover:bg-green-500 hover:border-green-500
                  text-white border border-2 rounded-full
                  shadow-lg transition-transform
                  hover:scale-110"
